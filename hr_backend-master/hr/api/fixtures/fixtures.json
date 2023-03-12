@@ -1,0 +1,204 @@
+[
+{
+    "model": "api.skill",
+    "pk": 1,
+    "fields": {
+        "name": "Python"
+    }
+},
+{
+    "model": "api.skill",
+    "pk": 2,
+    "fields": {
+        "name": "Git"
+    }
+},
+{
+    "model": "api.skill",
+    "pk": 3,
+    "fields": {
+        "name": "Docker"
+    }
+},
+{
+    "model": "api.candidate",
+    "pk": 1,
+    "fields": {
+        "name": "Olga",
+        "skills": [
+            1, 2
+        ]
+    }
+},
+{
+    "model": "api.candidate",
+    "pk": 2,
+    "fields": {
+        "name": "Anna",
+        "skills": [
+            2
+        ]
+    }
+},
+{
+    "model": "api.candidate",
+    "pk": 3,
+    "fields": {
+        "name": "Anna",
+        "skills": [
+            3
+        ]
+    }
+},
+{
+    "model": "api.candidate",
+    "pk": 4,
+    "fields": {
+        "name": "Masha",
+        "skills": [
+            3
+        ]
+    }
+},
+{
+    "model": "api.position",
+    "pk": 1,
+    "fields": {
+        "name": "Project Manager",
+        "skills": [
+            1
+        ]
+    }
+},
+{
+    "model": "api.position",
+    "pk": 2,
+    "fields": {
+        "name": "Tester",
+        "skills": [
+            2, 3
+        ]
+    }
+},
+{
+    "model": "api.position",
+    "pk": 3,
+    "fields": {
+        "name": "Manager",
+        "skills": [
+            3
+        ]
+    }
+},
+{
+    "model": "api.selection",
+    "pk": 1,
+    "fields": {
+        "candidate": 1,
+        "position": 1,
+        "competence": null,
+        "stage": "Анкетирование"
+    }
+},
+{
+    "model": "api.selection",
+    "pk": 2,
+    "fields": {
+        "candidate": 2,
+        "position": 2,
+        "competence": null,
+        "stage": "Тестирование"
+    }
+},
+{
+    "model": "api.selection",
+    "pk": 3,
+    "fields": {
+        "candidate": 3,
+        "position": 3,
+        "competence": null,
+        "stage": "Стажировка"
+    }
+},
+{
+    "model": "api.selection",
+    "pk": 4,
+    "fields": {
+        "candidate": 4,
+        "position": 3,
+        "competence": null,
+        "stage": "Аттестация"
+    }
+},
+{
+    "model": "api.questionnaire",
+    "pk": 1,
+    "fields": {
+        "selection": 2,
+        "question": "Почему люки круглые?",
+        "answer": "Потому",
+        "rating": 9
+    }
+},
+{
+    "model": "api.questionnaire",
+    "pk": 2,
+    "fields": {
+        "selection": 3,
+        "question": "2+4",
+        "answer": "5",
+        "rating": 4
+    }
+},
+{
+    "model": "api.questionnaire",
+    "pk": 3,
+    "fields": {
+        "selection": 4,
+        "question": "как дела",
+        "answer": "хорошо",
+        "rating": 10
+    }
+},
+{
+    "model": "api.testing",
+    "pk": 1,
+    "fields": {
+        "selection": 3,
+        "theory": 9,
+        "practice": 5,
+        "average": 7.0
+    }
+},
+{
+    "model": "api.testing",
+    "pk": 4,
+    "fields": {
+        "selection": 4,
+        "theory": 5,
+        "practice": 5,
+        "average": 5.0
+    }
+},
+{
+    "model": "api.internship",
+    "pk": 1,
+    "fields": {
+        "selection": 4,
+        "theory": 10,
+        "practice": 10,
+        "average": 10.0
+    }
+},
+{
+    "model": "api.hrproductivity",
+    "pk": 1,
+    "fields": {
+        "hr": 1,
+        "candidate": 1,
+        "position": 1,
+        "action": "Проведение аттестации кандидата",
+        "created_at": "2022-11-15T15:31:28.182Z"
+    }
+}
+]

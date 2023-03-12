@@ -1,0 +1,32 @@
+version: '3.9'
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: hr
+      MYSQL_USER: username
+      MYSQL_ROOT_PASSWORD: 1
+      MYSQL_PASSWORD: Passsowrd1234!
+    ports:
+      - 13306:3306
+    volumes:
+      - myvolume:/var/lib/mysql
+
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    tty: true
+    volumes:
+      - .:/app
+    environment:
+      MYSQL_DATABASE: hr
+      MYSQL_USER: username
+      MYSQL_PASSWORD: Passsowrd1234!
+      MYSQL_HOST: db
+      MYSQL_PORT: 3306
+
+volumes:
+  myvolume:
